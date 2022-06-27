@@ -4,10 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Mail to CS</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
   <style type="text/css">
     .center-h {
-      display: flex; /* or display:grid */
+      display: flex;
       justify-content: center;
     }
     .center-v {
@@ -18,12 +17,17 @@
       height: 500;
     }
   </style>
+  <script type="text/javascript">
+    function mailme() {
+      let string = 'bWVyY2hhbnRAZ2V0c2xhc2guaWQ=';
+      window.location =  "mailto:" + atob(string);
+    }
+  </script>
 </head>
 
-<body>
-
+<body onload="mailme()">
 <div class="h-500 center-v center-h">
-  <button>Mail me</button>
+  <button onclick="mailme()">Mail me</button>
 <div>
 
 </body>
